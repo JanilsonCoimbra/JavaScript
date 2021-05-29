@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de JavaScript</title>
+    <style>
+        div#div{
+            height: 200px;
+            width: 200px;
+            background: green;
+            line-height: 200px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">JavaScript</div>
+    <script>
+        var c = window.document.getElementById('div')
+        c.addEventListener('click', clic)
+        c.addEventListener('mouseout', sair)
+        c.addEventListener('mouseenter', enter)
+        function clic(){
+            c.innerText = 'Função ativa'
+            c.style.background = 'red'
+            c.style.borderRadius = '100px'
+            
+        }
+        function enter(){
+            c.innerText = 'Olá Janilson'
+        }
+        function sair(){
+            c.style.background = 'green'
+            c.style.borderRadius = '0'
+        }
+
+    </script>
+</body>
+</html>
